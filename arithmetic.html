@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Arithmetic
+        </title>
+        
+    </head>
+ 
+<body>
+
+<h2>Pramod Computes</h2>
+
+<form>
+    <label for="number1">Enter a number </label>
+    <input type ="number" id="number1" value=10> <br>
+
+    <label for="number2">Enter a number </label>
+    <input type ="number" id="number2" value="2"> <br>
+
+    <input type="button" onclick="permutations()" value="Compute">
+</form>
+
+
+
+
+<p id="result"> </p>
+
+<form>
+    <div class="form-check">
+    <input class="form-check-input" type="radio" id="plus" name="cal" onclick="processRadio()" value="plus">
+    <label class="form-check-label" for="plus">+</label></br>
+    </div>
+    <div class="form-check">
+    <input class="form-check-input" type="radio" id="minus" name="cal" onclick="processRadio()" value="minus">
+    <label class="form-check-label" for="minus">-</label></br>
+    </div>
+    <div class="form-check">
+    <input class="form-check-input" type="radio" id="times" name="cal" onclick="processRadio()" value="times">
+    <label class="form-check-label" for="times">*</label></br>
+    </div>
+    <div class="form-check">
+    <input class="form-check-input" type="radio" id="divide" name="cal" onclick="processRadio()" value="divide">
+    <label class="form-check-label" for="divide">/</label></br>
+    </div>
+    </form>
+
+  <p id="result1"></p>
+
+<script> 
+
+function permutations(){
+    
+    var firstNumber = document.getElementById("number1").value
+    var secondNumber = document.getElementById("number2").value
+
+    var product = 1
+
+    
+    let i= number1;
+
+    do{
+        product *=i;
+        i--
+    }while(i >= (number1 - number2  +1))
+
+
+    out = document.getElementById("result")
+    
+    out.innerHTML = number1 + " permute " + number2 + " is: " + product
+    
+}
+
+
+    function processRadio() {
+    firstNumber = document.getElementById("number1").value
+    secondNumber = document.getElementById("number2").value
+
+
+
+    plus = document.getElementById("plus").checked
+    minus = document.getElementById("minus").checked
+    times = document.getElementById("times").checked
+    divide = document.getElementById("divide").checked
+
+        if (plus) {
+                out= document.getElementById("result1")
+                out.innerHTML =  (Number)(number1) + Number(number2)
+            }
+            if (minus) {
+                out= document.getElementById("result1")
+                out.innerHTML = number1 - number2
+            }
+            if (times) {
+                out=document.getElementById("result1")
+                out.innerHTML = number1 * number2
+            }
+            if (divide) {
+                out=document.getElementById("result1")
+                out.innerHTML = number1 / number2
+            }
+    
+
+
+}
+
+</script>
+
+</body>
+</html> 
