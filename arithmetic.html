@@ -58,19 +58,19 @@ function permutations()
     var product = 1
 
     
-    let i= number1;
+    let i= firstNumber;
 
     do
     {
         product *=i;
         i--
     }
-    while(i >= (number1 - number2  +1))
+    while(i >= (firstNumber - secondNumber  +1))
 
 
     out = document.getElementById("result")
     
-    out.innerHTML = number1 + " permute " + number2 + " is: " + product
+    out.innerHTML = firstNumber + " permute " + secondNumber + " is: " + product
     
 }
 
@@ -88,21 +88,25 @@ function permutations()
 
 
 
-        if (plus) {
+        if (plus)
+            {
                 out= document.getElementById("result1")
-                out.innerHTML =  (Number)(number1) + Number(number2)
+                out.innerHTML =  (Number)(firstNumber) + Number(secondNumber)
             }
-            if (minus) {
+            if (minus)
+             {
                 out= document.getElementById("result1")
-                out.innerHTML = number1 - number2
+                out.innerHTML = firstNumber - secondNumber
             }
-            if (times) {
+            if (times)
+             {
                 out=document.getElementById("result1")
-                out.innerHTML = number1 * number2
+                out.innerHTML = firstNumber * secondNumber
             }
-            if (divide) {
+            if (divide)
+             {
                 out=document.getElementById("result1")
-                out.innerHTML = number1 / number2
+                out.innerHTML = firstNumber / secondNumber
             }
     
 
